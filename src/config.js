@@ -29,32 +29,32 @@ const config = {
     {
       name: 'Facebook',
       appId: 'com.facebook.katana',
-      image: 'https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg'
+      image: 'https://s2.ax1x.com/2019/08/06/ehdFIK.png'
     },
     {
       name: 'Instagram',
       appId: 'com.instagram.android',
-      image: 'https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw'
+      image: 'https://s2.ax1x.com/2019/08/06/ehduqI.png'
     },
     {
       name: 'Snapchat',
       appId: 'com.snapchat.android',
-      image: 'https://lh3.googleusercontent.com/ujz8cInt2YuaGLo2wahih771yXzWbyhNhzrCzm5Y5omDnLRt3v-FTTNMVfgT7FgIEfI'
+      image: 'https://s2.ax1x.com/2019/08/06/ehddZq.png'
     },
     {
       name: 'YouTube',
       appId: 'com.google.android.youtube',
-      image: 'https://lh3.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc'
+      image: 'https://s2.ax1x.com/2019/08/06/ehdNss.png'
     },
     {
       name: 'Twitter',
       appId: 'com.twitter.android',
-      image: 'https://lh3.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk'
+      image: 'https://s2.ax1x.com/2019/08/06/ehdULn.png'
     },
     {
       name: '9gag',
       appId: 'com.ninegag.android.app',
-      image: 'https://lh3.googleusercontent.com/QiE-x76mMbIxT5W2sBCdORRnz-YJys2ridssRJZmiE540_5ADuFnOg-9I0H6bTQOuw'
+      image: 'https://s2.ax1x.com/2019/08/06/ehdtMj.png'
     }
   ]
 }
