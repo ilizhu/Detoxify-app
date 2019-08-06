@@ -15,15 +15,15 @@
 */
 
 const config = {
-  title: 'Detoxify.app',
-  short_description: 'Digital detox made easy',
-  description: 'Generate a fake app to replace any addictive app 📱🙅',
-  long_description: 'Use AppDetox to help you detox from any addictive app',
-  keywords: 'digital detox, detox, pwa',
+  title: 'fakeApp',
+  short_description: '简单的创建应用快捷方式',
+  description: '用一个假 App 替代一个上瘾的 App📱🙅',
+  long_description: '使用fakeApp来帮助你取代任何上瘾的应用',
+  keywords: 'fakeApp, 假的, pwa',
   share: 'Use this app to detox from ',
   og_title: ' Fake detox app',
   og_description: 'An fake app to help you detox from ',
-  popular: 'Most popular',
+  popular: '最受欢迎的',
   google_analytics: 'UA-143582756-1',
   suggestions: [
     {
@@ -55,7 +55,7 @@ const config = {
       name: '9gag',
       appId: 'com.ninegag.android.app',
       image: 'https://lh3.googleusercontent.com/QiE-x76mMbIxT5W2sBCdORRnz-YJys2ridssRJZmiE540_5ADuFnOg-9I0H6bTQOuw'
-    }        
+    }
   ]
 }
 
