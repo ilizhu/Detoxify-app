@@ -1,0 +1,87 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <main class="home container">
+    <div class="home__icon">
+      <img src="/images/icon.png" class="icon" alt="icon"/>
+    </div>
+    <h1 class="home__title">{{ config.title }}</h1>
+    <p class="home__description">{{ config.description }}</p>
+    <div class="card">
+      <input id="search" class="search" type="text" placeholder="在这里搜索你想戒掉的App">
+    </div>
+    <h2 class="home__subtitle">{{ config.popular }}</h2>
+    <ul class="home__applists">
+      {% for suggestion in config.suggestions %}
+      <li class="home__app">
+        <a href="/pwa/{{ suggestion.appId }}/" class="app">
+          <img class="app__image" src="{{ suggestion.image }}" alt="Digital detox app icon for {{ suggestion.name }}">
+          <p class="app__name">{{ suggestion.name }}</p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+  <section class="container newsletter-section">
+
+
+
+    <!--End mc_embed_signup-->
+  </section>
+  <footer class="container footer">
+    <p>Made with 💗 in China by <a href="https://xskr.me" target="_blank">李子呀</a>
+    <p>
+      折腾自 <a href="https://github.com/sandoche/Detoxify-app" target="_blank">Github</a>
+    </p>
+  </footer>
+{% endblock %}
+
+{% block script %}
+  <script src="/javascripts/auto-complete.js"></script>
+  <script>
+    var loading = 0;
+
+    function startLoading() {
+      loading++;
+      updateLoader();
+    }
+
+    function stopLoading() {
+      loading--;
+      updateLoader();
+    }
+
+    function updateLoader() {
+      if(loading > 0) {
+        document.getElementById('search').classList.add('loader');
+      } else {
+        document.getElementById('search').classList.remove('loader');
+      }
+    }
+
+    var autocomplete = new autoComplete({
+      selector: "#search",
+      minChars: 3,
+      delay: 150,
+      cache: true,
+      source: function (term, suggest){
+        startLoading();
+        fetch('/api/search?q=' + term)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(myJson) {
+            suggest(myJson);
+            stopLoading();
+          });
+      },
+      renderItem: function (item, search){
+        return `<div class="autocomplete-suggestion" data-appid="${item.appId}"><img src="${item.icon}" class="autocomplete-suggestion__icon">${item.title}</div>`;
+      },
+      onSelect(event, term, item) {
+        window.location.href = '/pwa/' + item.dataset.appid + '/';
+      }
+    });
+  </script>
+    {% include 'partials/google-analytics.twig' %}
+{% endblock %}
