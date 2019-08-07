@@ -20,7 +20,7 @@ Object.defineProperty(exports, "__esModule", {
 */
 
 var config = {
-  version: '1.0.1',
+  version: '1.0',
   title: 'fakeApp',
   short_description: '快速创建戒瘾应用',
   description: '用一个假App替代上瘾的App🙅',

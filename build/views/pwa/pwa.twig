@@ -37,7 +37,7 @@
     <main class="main">
       <div class="card" id="install-card">
         <img src="{{ data.icon }}" class="card__icon"/>
-        <p class="card__text card__text--space">记得添加到主屏幕aaa~</p>
+        <p class="card__text card__text--space">记得添加到主屏幕~</p>
         <a target="_blank" class="button button--light" id="how-to-install" data-micromodal-trigger="modal-1">安装</a>
         <button class="button button--light" id="install" style="display: none;">安装</button>
       </div>
@@ -57,7 +57,7 @@
       </div>
     </main>
     <footer class="footer">
-      <p>Made with 💗️</p>
+      <p>Made with 💗️ v{{ config.version }}</p>
     </footer>
 
     {% include '../partials/guide-modal.twig' %}
@@ -77,7 +77,6 @@
                   case 'installed':
                     if (navigator.serviceWorker.controller) {
                       console.log('最新版本的内容已准备好,下次刷新使用');
-                      window.location.reload();
                     } else {
                       console.log('正在使用缓存的内容');
                     }
