@@ -30,7 +30,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   limitations under the License.
 */
 
-var gplay = require('google-play-scraper').memoized();
+// var gplay = require('google-play-scraper').memoized();
+//
+// const getResults = async function(query) {
+//   return await gplay.search({
+//     term: query,
+//     num: 3
+//   });
+// }
+
+
+var appstore = require('app-store-scraper').memoized();
 
 var getResults = function () {
   var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(query) {
@@ -39,7 +49,7 @@ var getResults = function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return gplay.search({
+            return appstore.search({
               term: query,
               num: 3
             });

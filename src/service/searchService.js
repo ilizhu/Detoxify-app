@@ -14,10 +14,20 @@
   limitations under the License.
 */
 
-var gplay = require('google-play-scraper').memoized();
+// var gplay = require('google-play-scraper').memoized();
+//
+// const getResults = async function(query) {
+//   return await gplay.search({
+//     term: query,
+//     num: 3
+//   });
+// }
+
+
+var appstore = require('app-store-scraper').memoized();
 
 const getResults = async function(query) {
-  return await gplay.search({
+  return await appstore.search({
     term: query,
     num: 3
   });

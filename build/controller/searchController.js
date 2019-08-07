@@ -41,15 +41,16 @@ router.get('/', function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.next = 2;
+            console.error(' start search');
+            _context.next = 3;
             return (0, _searchService2.default)(req.query.q);
 
-          case 2:
+          case 3:
             results = _context.sent;
 
             res.json(results);
 
-          case 4:
+          case 5:
           case 'end':
             return _context.stop();
         }

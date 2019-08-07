@@ -30,7 +30,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   limitations under the License.
 */
 
-var gplay = require('google-play-scraper').memoized();
+// var gplay = require('google-play-scraper').memoized();
+//
+// const getAppData = async function(appId) {
+//   return await gplay.app({appId: appId});
+// }
+
+var appstore = require('app-store-scraper').memoized();
 
 var getAppData = function () {
   var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(appId) {
@@ -39,7 +45,7 @@ var getAppData = function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return gplay.app({ appId: appId });
+            return appstore.app({ appId: appId });
 
           case 2:
             return _context.abrupt('return', _context.sent);

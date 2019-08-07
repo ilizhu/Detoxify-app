@@ -14,10 +14,16 @@
   limitations under the License.
 */
 
-var gplay = require('google-play-scraper').memoized();
+// var gplay = require('google-play-scraper').memoized();
+//
+// const getAppData = async function(appId) {
+//   return await gplay.app({appId: appId});
+// }
+
+var appstore = require('app-store-scraper').memoized();
 
 const getAppData = async function(appId) {
-  return await gplay.app({appId: appId});
+  return await appstore.app({appId: appId});
 }
 
 export default getAppData;

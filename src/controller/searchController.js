@@ -19,6 +19,7 @@ var router = express.Router();
 import getResults from '../service/searchService';
 
 router.get('/', async function(req, res, next) {
+  console.error(' start search');
   const results = await getResults(req.query.q);
   res.json(results);
 });
