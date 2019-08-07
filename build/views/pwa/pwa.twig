@@ -50,7 +50,7 @@
         <img src="{{ data.icon }}" class="card__icon"/>
         <p class="card__text card__text--space">不要忘记添加到桌面已更好的戒瘾!</p>
         <a target="_blank" class="button button--light" id="how-to-install" data-micromodal-trigger="modal-1">安装</a>
-        <button class="button button--light" id="install" style="display: none;">Install</button>
+        <button class="button button--light" id="install" style="display: none;">安装</button>
       </div>
       <div class="card">
         <p class="emoji blurable">🙌</p>
@@ -63,7 +63,7 @@
         </p>
         <form id="motive-form" class="motive-form">
           <input type="text" id="motive-input" class="card__text--space">
-          <button class="button button--light">Save</button>
+          <button class="button button--light">保存</button>
         </form>
       </div>
     </main>
@@ -195,7 +195,7 @@
       var shareButton = document.getElementById("share-button");
       var share = function() {
           navigator.share({
-            title: '{{ data.title }} Detox App',
+            title: '{{ data.title }} Fake App',
             text: '{{ config.share }}{{ data.title }}',
             url: '{{ fullUrl }}',
         })

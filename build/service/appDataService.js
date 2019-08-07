@@ -45,7 +45,11 @@ var getAppData = function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return appstore.app({ appId: appId });
+            return appstore.app({
+              lang: 'cn',
+              country: 'cn',
+              appId: appId
+            });
 
           case 2:
             return _context.abrupt('return', _context.sent);

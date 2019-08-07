@@ -28,6 +28,8 @@ var appstore = require('app-store-scraper').memoized();
 
 const getResults = async function(query) {
   return await appstore.search({
+    lang: 'cn',
+    country:'cn',
     term: query,
     num: 3
   });

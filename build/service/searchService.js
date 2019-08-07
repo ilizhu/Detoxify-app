@@ -50,6 +50,8 @@ var getResults = function () {
           case 0:
             _context.next = 2;
             return appstore.search({
+              lang: 'cn',
+              country: 'cn',
               term: query,
               num: 3
             });

@@ -23,7 +23,11 @@
 var appstore = require('app-store-scraper').memoized();
 
 const getAppData = async function(appId) {
-  return await appstore.app({appId: appId});
+  return await appstore.app({
+    lang: 'cn',
+    country:'cn',
+    appId: appId
+  });
 }
 
 export default getAppData;
