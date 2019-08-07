@@ -95,6 +95,15 @@
     </script>
 
     <script>
+
+      window.onunload=function(){
+        alert('退出')
+      };
+      window.onload=function(){
+        alert('打开')
+      };
+
+
       // Manages the counter
       var counter = document.getElementById('counter');
       var localStorage = window.localStorage;
