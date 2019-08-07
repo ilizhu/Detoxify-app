@@ -16,8 +16,8 @@
 
 const config = {
   title: 'fakeApp',
-  short_description: '简单的创建应用快捷方式',
-  description: '用一个假 App 替代一个上瘾的 App📱🙅',
+  short_description: '快速创建戒瘾应用',
+  description: '用一个假App替代上瘾的App🙅',
   long_description: '使用fakeApp来帮助你取代任何上瘾的应用',
   keywords: 'fakeApp, 假的, pwa',
   share: 'Use this app to detox from ',
@@ -27,34 +27,34 @@ const config = {
   google_analytics: 'UA-143582756-1',
   suggestions: [
     {
-      name: 'Facebook',
-      appId: 'com.facebook.katana',
-      image: 'https://s2.ax1x.com/2019/08/06/ehdFIK.png'
+      name: '微信',
+      appId: 'com.tencent.xin',
+      image: 'https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/b1/b9/35/b1b935d2-6337-58a7-1627-668a8b6c9ff1/source/512x512bb.jpg'
     },
     {
-      name: 'Instagram',
-      appId: 'com.instagram.android',
-      image: 'https://s2.ax1x.com/2019/08/06/ehduqI.png'
+      name: '微博',
+      appId: 'com.sina.weibo',
+      image: 'https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/e7/2e/93/e72e93b4-c175-92fc-fd76-35ef1ca09b91/source/512x512bb.jpg'
     },
     {
-      name: 'Snapchat',
-      appId: 'com.snapchat.android',
-      image: 'https://s2.ax1x.com/2019/08/06/ehddZq.png'
+      name: '抖音',
+      appId: 'com.ss.iphone.ugc.Aweme',
+      image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/8c/c5/e7/8cc5e745-1942-123e-d12a-0674edf2604e/source/512x512bb.jpg'
     },
     {
-      name: 'YouTube',
-      appId: 'com.google.android.youtube',
-      image: 'https://s2.ax1x.com/2019/08/06/ehdNss.png'
+      name: 'QQ',
+      appId: 'com.tencent.mqq',
+      image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/fd/61/1f/fd611feb-9d5e-74f6-7a46-41934f9815dc/source/512x512bb.jpg'
     },
     {
-      name: 'Twitter',
-      appId: 'com.twitter.android',
-      image: 'https://s2.ax1x.com/2019/08/06/ehdULn.png'
+      name: '网易云音乐',
+      appId: 'com.netease.cloudmusic',
+      image: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/7d/59/b8/7d59b855-e1f5-6c38-0cee-3e21152a1833/source/512x512bb.jpg'
     },
     {
-      name: '9gag',
-      appId: 'com.ninegag.android.app',
-      image: 'https://s2.ax1x.com/2019/08/06/ehdtMj.png'
+      name: '淘宝',
+      appId: 'com.taobao.taobao4iphone',
+      image: 'https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/d7/76/7e/d7767ead-df47-be4b-dfc5-39e1f0aaae44/source/512x512bb.jpg'
     }
   ]
 }
