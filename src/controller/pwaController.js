@@ -41,7 +41,7 @@ router.get('/:appId/manifest\.json', async function (req, res, next) {
     res.render('error', { error: e })
   }
 });
-
+// 获取sw.js
 router.get('/:appId/service-worker\.js', function (req, res, next) {
   try {
     res.set('Content-Type', 'application/javascript');
@@ -63,7 +63,8 @@ router.get('/:appId/service-worker\.js', function (req, res, next) {
     // in turn trigger the install event again.
     const PRECACHE = '${req.params.appId}-precache-v4';
     const RUNTIME = 'runtime';
-    
+    const VERSION = '${config.version}';
+    console.log("SW版本:",VERSION);
     // A list of local resources we always want to be cached.
     const PRECACHE_URLS = [
       '/pwa/${req.params.appId}/',

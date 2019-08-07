@@ -37,7 +37,7 @@
     <main class="main">
       <div class="card" id="install-card">
         <img src="{{ data.icon }}" class="card__icon"/>
-        <p class="card__text card__text--space">记得添加到主屏幕~</p>
+        <p class="card__text card__text--space">记得添加到主屏幕aaa~</p>
         <a target="_blank" class="button button--light" id="how-to-install" data-micromodal-trigger="modal-1">安装</a>
         <button class="button button--light" id="install" style="display: none;">安装</button>
       </div>
@@ -65,17 +65,10 @@
     <script>
       // Service worker installation
       'use strict';
-      const version = '1.0.2';
-      console.log('version:' + version);
+      console.log('PAGE版本:','{{ config.version }}');
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
-            console.log('执行注册...');
-            // 版本号控制更新
-            // if (localStorage.getItem('sw_version') !== version) {
-            //   reg.update().then(() => localStorage.setItem('sw_version', version));
-            // }
-            reg.update().then(() => console.log("update"));
             reg.onupdatefound = function() {
               var installingWorker = reg.installing;
               installingWorker.onstatechange = function() {
@@ -83,9 +76,10 @@
                 switch (installingWorker.state) {
                   case 'installed':
                     if (navigator.serviceWorker.controller) {
-                      console.log('New or updated content is available.');
+                      console.log('最新版本的内容已准备好,下次刷新使用');
+                      window.location.reload();
                     } else {
-                      console.log('Content is now available offline!');
+                      console.log('正在使用缓存的内容');
                     }
                     break;
                   case 'redundant':
@@ -94,38 +88,10 @@
                 }
               };
             };
-
-            reg.addEventListener('install', function(event) {
-              console.error('执行安装1...');
-              self.skipWaiting();
-            });
-
           }).catch(function(e) {
             console.error('Error during service worker registration:', e);
           });
         });
-
-        // 安装阶段跳过等待，直接进入 active
-        // self.addEventListener('install', function(event) {
-        //   console.error('执行安装...');
-        //   event.waitUntil(self.skipWaiting());
-        // });
-        //
-        // self.addEventListener('activate', event => event.waitUntil(
-        //         Promise.all([
-        //           // 更新客户端
-        //           clients.claim(),
-        //           // 清理旧版本
-        //           caches.keys().then(cacheList => Promise.all(
-        //                   cacheList.map(cacheName => {
-        //                     if (cacheName !== CACHE_NAME) {
-        //                       caches.delete(cacheName);
-        //                     }
-        //                   })
-        //           ))
-        //         ])
-        // ));
-
       }
     </script>
 

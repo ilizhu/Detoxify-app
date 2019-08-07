@@ -15,14 +15,15 @@
 */
 
 const config = {
+  version:'1.0.1',
   title: 'fakeApp',
   short_description: '快速创建戒瘾应用',
   description: '用一个假App替代上瘾的App🙅',
   long_description: '使用fakeApp来帮助你取代任何上瘾的应用',
   keywords: 'fakeApp, 假的, pwa',
-  share: 'Use this app to detox from ',
-  og_title: ' Fake detox app',
-  og_description: 'An fake app to help you detox from ',
+  share: '',
+  og_title: ' Fake App',
+  og_description: '一个假的app帮助你取代上瘾的',
   popular: '最受欢迎的',
   google_analytics: 'UA-143582756-1',
   suggestions: [
